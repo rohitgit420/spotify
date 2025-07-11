@@ -25,7 +25,7 @@ async function get_songs(folder) {
 
   current_folder = folder;
 
-  let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
+  let a = await fetch(`/${folder}/`);
 
   let response = await a.text();
 
@@ -129,7 +129,7 @@ let div = document.createElement("div")
         let response = await as.json();
         console.log(response)
 
-        cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="cart">
+        cardContainer.innerHTML = cardContainer.innerHTML + `\<div data-folder="${folder}" class="cart">
                            <div class="playing">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19"
